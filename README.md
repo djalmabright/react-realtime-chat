@@ -14,7 +14,7 @@ For more information using Apollo subscriptions please read:
 http://dev.apollodata.com/react/subscriptions.html
 
 **Time limit:**
-5 hours
+2 hours
 
 **Finished project:**
 Clone this repo and provide a link to the final solution
