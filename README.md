@@ -4,7 +4,7 @@ This is an example chat application using React for a componentised UI and Pushe
 
 The UI components can be found in `static/javascripts/ui_components`.
 
-The back-end is a Python app, found in `app.py`.
+The back-end is a Node.js found in `server.js`.
 
 ## Project Test Criteria
 
@@ -29,41 +29,31 @@ You can see a demo here: http://pusher-chat-demo.herokuapp.com/
 
 You'll need a Pusher account, so [signup for a free account](https://pusher.com/signup).
 
-You'll then need to install the application Python package dependencies. We'd recommend you do this in a [Virtual Environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/):
-
 ```bash
-$ virtualenv venv
-$ source venv/bin/activate
+$ npm install
 ```
 
-Then install the dependencies:
-
-```
-pip install -r requirements.txt
-```
+As per: https://pusher.com/docs/server_api_guide/interact_rest_api#publishing-events
 
 Prior to running the Python app you'll need some environmental variables to be set.
 
 * `PUSHER_CHAT_APP_ID` - your Pusher application ID
 * `PUSHER_CHAT_APP_KEY` - your Pusher application key
 * `PUSHER_CHAT_APP_SECRET` - your Pusher application secret
+* `PUSHER_CLUSTER` - your Pusher cluster
 
-You can do this from the command line as part of running the application:
 
-```bash
-PUSHER_CHAT_APP_ID=YOUR_APP_ID PUSHER_CHAT_APP_KEY=YOUR_APP_KEY PUSHER_CHAT_APP_SECRET=YOUR_APP_SECRET python app.py
-```
-
-Or, probably much more easily, with the help of [foreman](https://github.com/ddollar/foreman) and by setting these values in a `.env` file:
+Setting these values in a `.env` file:
 
 ```
-PUSHER_CHAT_APP_ID=YOUR_APP_ID
-PUSHER_CHAT_APP_KEY=YOUR_APP_KEY
-PUSHER_CHAT_APP_SECRET=YOUR_APP_SECRET
+PUSHER_CLUSTER=xxx
+PUSHER_APP_ID=xxx
+PUSHER_APP_KEY=xxxx
+PUSHER_APP_SECRET=xxx
 ```
 
 Then running:
 
 ```bash
-$ foreman start
+$ node server.js
 ```
