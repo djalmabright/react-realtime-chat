@@ -4,7 +4,7 @@ This is an example chat application using React for a componentised UI and Pushe
 
 The UI components can be found in `static/javascripts/ui_components`.
 
-The back-end is a Node.js found in `server.js`.
+The back-end uses Node.js and can be found in `server.js`.
 
 ## Project Test Criteria
 
@@ -35,7 +35,7 @@ $ npm install
 
 As per: https://pusher.com/docs/server_api_guide/interact_rest_api#publishing-events
 
-Prior to running the Python app you'll need some environmental variables to be set.
+Prior to running the node app you'll need some environmental variables to be set.
 
 * `PUSHER_CHAT_APP_ID` - your Pusher application ID
 * `PUSHER_CHAT_APP_KEY` - your Pusher application key
